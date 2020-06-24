@@ -1,7 +1,7 @@
 require 'rails_helper'
 feature ' visitor can view articles'do
     before do 
-        visit rout_path 
+        visit root_path 
     end
     describe 'visitor can see the articles'do
         it 'visitor can see the first article' do 

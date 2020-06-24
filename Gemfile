@@ -18,6 +18,7 @@ group :development, :test do
   gem 'capybara'
   gem 'pry-rails'
   gem 'factory_bot_rails'
+  gem 'coveralls', require: false
 end
 group :development do
   gem 'web-console', '>= 3.3.0'

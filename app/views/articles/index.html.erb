@@ -1,2 +1,7 @@
-<h1>The unbelievable reality</h1>
-<h1>Loosing weight without any diet or workout</h1>
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+       <%= article.title %><br />
+    </li>
+  <% end %>
+</ul>

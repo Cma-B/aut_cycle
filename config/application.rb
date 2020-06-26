@@ -26,6 +26,7 @@ module AutCycle
       generate.helper_specs false
       generate.routing_specs false
       generate.controller_specs false
+      generate.request_specs false
     end
     config.generators.system_tests = nil
   end

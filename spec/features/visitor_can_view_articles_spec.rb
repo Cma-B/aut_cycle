@@ -9,7 +9,7 @@ feature ' visitor can view articles' do
     describe 'visitor can see the articles'do
 
         it 'visitor can see the first article' do 
-        expect(page).to have_content 'The unbelievable reality'
+            expect(page).to have_content 'The unbelievable reality'
         end
 
         it 'visitor can  see the second article'do

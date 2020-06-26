@@ -1,0 +1,15 @@
+<h2>Write your article</h2>
+
+<%= form_with model: @article, local: true do |form|%>
+  <p>
+    <%= form.label :title %>
+    <br>
+    <%= form.text_field :title %>
+  </P>
+  <p>
+    <%= form.label :content%>
+    <br>
+    <%= form.text_area :content%>
+  </p>
+  <%= form.submit "Create Article"%>
+<% end %>

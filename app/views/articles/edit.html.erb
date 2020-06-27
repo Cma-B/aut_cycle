@@ -1,6 +1,6 @@
-<h2>Write your article</h2>
+<h2>Edit your article</h2>
 
-<%= form_with model: @article, local: true do |form|%>
+<%= form_with model: @article,  method: :get, local: true do |form|%>
   <p>
     <%= form.label :title %>
     <br>
@@ -11,5 +11,5 @@
     <br>
     <%= form.text_area :content%>
   </p>
-  <%= form.submit "Create Article"%>
+  <%= form.submit "Save changes"%>
 <% end %>

@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root controller: :articles, action: :index
-  resources :articles, only: [:show, :new, :create]
+  resources :articles, only: [:show, :new, :create, :edit, :save]
 end

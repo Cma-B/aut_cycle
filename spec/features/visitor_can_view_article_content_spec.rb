@@ -8,7 +8,7 @@ feature ' visitor can view articles content' do
     end
     
     describe 'visitor can see article content'do
-      it 'visitor can see the article' do 
+      it 'visitor can see the article title' do 
         expect(page).to have_content 'google reality'
       end
 

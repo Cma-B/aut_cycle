@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  root controller: :articles, action: :index
+  get 'welcome/index'
+  root 'welcome#index' #controller: :articles, action: :index
   resources :articles, only: [:show, :new, :create, :edit, :save]
 end

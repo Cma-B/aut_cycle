@@ -3,7 +3,8 @@ feature ' visitor can view articles' do
     before do 
         create(:article, title:"The unbelievable reality")
         create(:article, title:"Loosing weight without any diet or workout")
-        visit root_path 
+        visit welcome_index_path
+        click_on "My Blog" 
     end
     
     describe 'visitor can see the articles'do

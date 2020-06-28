@@ -19,7 +19,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'factory_bot_rails'
   gem 'coveralls', require: false
-  gem 'devise'
+ 
 end
 group :development do
   gem 'web-console', '>= 3.3.0'

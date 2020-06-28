@@ -11,34 +11,32 @@ class ArticlesController < ApplicationController
     @article = Article.new
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
   def create
-    @article = Article.create(article_param)
-    if @article.persisted? 
-      redirect_to root_path, notice: 'Article Created'
+    @article = Article.new(article_params)
+
+    if @article.save
+      redirect_to @article, notice: 'Article Created!'
     else
-      redirect_to new_article_path, notice: 'Error try again'
+      render 'new'
     end
   end
 
-  def edit
-    @article = Article.find(params[:id])
-   
-  end
-
-  def save
+  def update
    @article = Article.find(params[:id])
-   @article = Article.save(article_param)
-   if @article.persisted?
-    redirect_to article_path(:id), notice: "Article updated!"
+   if @article.update(article_params)
+    redirect_to @article, notice: "Article updated!"
   else
-    redirect_to edit_article_path, notice: "error, try again"
+    render 'edit'
   end
 end
 
-
  private
 
- def article_param
+ def article_params
    params.require(:article).permit(:title, :content)
  end
 end

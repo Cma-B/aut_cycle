@@ -3,8 +3,10 @@ require 'rails_helper'
 feature ' visitor can view articles content' do
     before do 
         create(:article, title: "google reality", content: "two people and half")
-        visit root_path 
-        click_on "google reality"
+        visit welcome_index_path
+        click_on "My Blog"
+        visit articles_path
+        click_on "Show"
     end
     
     describe 'visitor can see article content'do

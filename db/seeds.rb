@@ -11,3 +11,4 @@ Article.create(title: 'Viktor knows rails', content: "Rails is reallly fun")
 Article.create(title: 'Alex knows rails', content: "Rails is reallly fun")
 Article.create(title: 'Odeane knows rails', content: "Rails is reallly fun")
 Article.create(title: 'Felix knows rails', content: "Rails is reallly fun")
+Article.update(title: 'hi look at me'), content: 'Ruby on rails doesnt work and make me cry'

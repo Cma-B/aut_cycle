@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
 
     if @article.update(article_params)
-      redirect_to @article, notice: "Article updated!"
+      redirect_to @article, notice: 'Article Updated!'
     else
     render 'edit'
     end

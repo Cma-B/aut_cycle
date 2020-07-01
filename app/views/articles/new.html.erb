@@ -1,35 +1,32 @@
-<h2>Write your article</h2>
+<h2>New Article</h2>
 
-<%= form_with model: @article , url: articles_path, local: true do |form|%>
-  <% if @article.errors.any? %>
+<%= form_with scope: :article, url: articles_path, local: true do |form| %>
+    <% if @article.errors.any? %>
     <div id="error_explanation">
-      <h3>
-        <%= pluralize(@article.errors.count, "error") %>
-prohibited
+      <h2>
+        <%= pluralize(@article.errors.count, "error") %> prohibited
         this article from being saved:
-      </h3>
+      </h2>
       <ul>
         <% @article.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
     </div>
-  <% end %>
-
+  <% end %> 
+  
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
-  </P>
-
+  </p>
+ 
   <p>
     <%= form.label :content %><br>
     <%= form.text_area :content %>
   </p>
-
+ 
   <p>
     <%= form.submit "Create Article"%>
   </p>
-
 <% end %>
-
- <% link_to 'Back', articles_path %>
+ <%= link_to 'Back', articles_path %>
